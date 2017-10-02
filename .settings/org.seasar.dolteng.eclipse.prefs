@@ -1,0 +1,8 @@
+DaoType=S2JDBC
+DefaultResourcePath=/bonbon/src/main/resources
+DefaultRootPackage=sa.bonbon
+DefaultSrcPath=/bonbon/src/main/java
+ServletPath=/bonbon
+ViewType=SA-Struts
+WebContentsRoot=src/main/webapp/
+eclipse.preferences.version=1
