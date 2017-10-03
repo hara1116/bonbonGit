@@ -32,7 +32,7 @@ $(function() {
 </script>
 <link rel="stylesheet" type="text/css" href="${f:url('/css/mastermenu.css')}" />
 <link rel="stylesheet" type="text/css" href="${f:url('/css/lightbox.css')}">
-<script src="js/lightbox.min.js"></script>
+<script src="${f:url('/js/lightbox.min.js')}"></script>
 
 <title>カラオケBonBon管理システム</title>
 </head>
@@ -48,7 +48,7 @@ $(function() {
 		<font siza="1" align="left">従業員名:テスト 太郎</font> -->
 		<p align="left">従業員CD:TEST000001</p>
 		<p align="left">従業員名:テスト 太郎</p>
-		<div id="submenu_header">ログイン情報</div>
+		<div id="submenu_header">従業員情報管理</div>
 		<ul id="submenu_body">
 			<div id="profile" style="display:none;">
 			<table class="type11">
@@ -68,8 +68,9 @@ $(function() {
 				</tbody>
 			</table>
 			</div>
-			<div Align="left">
-			<input type="button" id="id1" value="アドミン情報確認" />
+			<div style="display:inline-flex" align="center">
+			<input type="button" id="id1" value="アドミン情報" />
+			<input type="button"  value="ログアウト" />
 			</div>
 		</ul><br>
 
@@ -94,16 +95,9 @@ $(function() {
 				</ul>
 			</div>
 		</div>
-		<div id="pickup">
-			<div Align="right">
-			<input type="button" id="id1" value="ログアウト" />
-			</div>
-		</div>
 	</div>
-
 	<!-- フッタ -->
 	<div id="footer"><address>Copyright (c) SA CONSULTING All Rights Reserved.</address></div>
-
 </div>
 </body>
 </html>
