@@ -70,7 +70,7 @@ $(function() {
 			</div>
 			<div style="display:inline-flex" align="center">
 			<input type="button" id="id1" value="アドミン情報" />
-			<input type="button"  value="ログアウト" />
+			<s:form method="POST"><html:submit property="logout" value="ログアウト"/></s:form>
 			</div>
 		</ul><br>
 
@@ -87,12 +87,14 @@ $(function() {
 			<h2>MENU一覧</h2>
 			</div>
 			<div class="nav" align="center">
+			<s:form method="POST">
 				<ul class="nl">
-				<li><a href="#">・社員登録</a></li>
-				<li><a href="#">・店舗登録</a></li>
-				<li><a href="#">・社員検索</a></li>
-				<li><a href="#">・店舗検索</a></li>
+				<s:link href="#">・社員登録</s:link><br>
+				<s:link href="/shopRegister/shopRegister">・店舗登録</s:link><br>
+				<s:link href="#">・社員検索</s:link><br>
+				<s:link href="#">・店舗検索</s:link><br>
 				</ul>
+			</s:form>
 			</div>
 		</div>
 	</div>

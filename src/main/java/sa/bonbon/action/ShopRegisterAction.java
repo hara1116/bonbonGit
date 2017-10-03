@@ -7,7 +7,7 @@ import org.seasar.struts.annotation.ActionForm;
 import sa.bonbon.form.MasterMenuForm;
 import sa.bonbon.dto.MasterMenuDto;
 import sa.bonbon.service.MasterMenuService;
-public class MasterMenuAction {
+public class ShopRegisterAction {
 
 	/*
 	@ActionForm
@@ -26,7 +26,7 @@ public class MasterMenuAction {
 	 * @return
 	 */
     @Execute(validator = false)
-	public String masterMenu() {
+	public String shopRegister() {
         return "index.jsp";
 	}
 
@@ -38,12 +38,5 @@ public class MasterMenuAction {
 	public String logout() {
         return "/login/index.jsp";
 	}
-
-    @Execute(validator = false)
-	public String shopRegister() {
-        return "/shopRegister/index.jsp";
-	}
-
-
 
 }
