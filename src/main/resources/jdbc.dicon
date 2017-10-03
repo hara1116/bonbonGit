@@ -131,7 +131,7 @@
 	<component name="xaDataSource"
 		class="org.seasar.extension.dbcp.impl.XADataSourceImpl">
 		<property name="driverClassName">
-			"net.sourceforge.jtds.jdbc.Driver"
+			"com.microsoft.sqlserver.jdbc.SQLServerDriver"
         </property>
         <property name="URL">
             "jdbc:sqlserver://localhost;instance=SQLEXPRESS;databaseName=SA"

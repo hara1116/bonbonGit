@@ -1,45 +1,26 @@
-<%@page pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <title>ログイン画面</title>
-    </head>
-    <body>
-        <h1 align="center">カラオケBonBon管理システム</h1>
-                        <s:submit property="userRegist" value="従業員登録" />
-        <html:button property="userregist" value="従業員登録" style="position: absolute; right: 15px; top: 15px" />
-
-        <div align="center">
-            <form action="list.html" method="get">
-                <table table border="0" width="500"  cellspacing="0" cellpadding="3" bordercolor="#333333">
-                	<caption>ログイン</caption>
-                    <tr>
-                        <th align = "right">
-                            ユーザID：
-                        </th>
-                        <td>
-                            <input type="text" name="user_id" value="" size="24">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th align = "right">
-                            パスワード：
-                        </th>
-                        <td>
-                            <input type="password" name="password" value="" size="24">
-                        </td>
-                    </tr>
-                </table>
-                <br>
-                <input type="submit" value="ログイン" style="width:10%;">
-            </form>
-        </div>
-        <s:form method="POST">
-        お名前をどうぞ！
-                <html:text property="name" />
-                <s:submit property="userregist" value="送信" />
-        </s:form>
-
-
-    </body>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>ログイン画面</title>
+</head>
+<body>
+    <div align="center">
+    	<div align="right">
+    		<s:submit property="userRegist" value="従業員登録" />
+    	</div>
+    	<br>
+    	<br>
+    	<br>
+	<h1>カラオケBonBon管理システム</h1>
+		<s:form method="POST">
+			ログインID:<html:text maxlength="10" property="userId" /><br>
+			パスワード:<html:password maxlength="10" property="password" /><br>
+			<html:submit property="masterMenu" value="ログイン"/>
+		</s:form>
+	</div>
+</body>
 </html>

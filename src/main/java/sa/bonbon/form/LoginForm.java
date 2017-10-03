@@ -2,5 +2,6 @@ package sa.bonbon.form;
 
 public class LoginForm {
 
-	public String name;
+	public String userId;
+	public String password;
 }

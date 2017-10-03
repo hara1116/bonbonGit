@@ -39,4 +39,10 @@ public class LoginAction {
 	public String userregist() {
         return "userregist?redirect=true";
 	}
+
+	/**ログイン画面の実行メソッド*/
+    @Execute(validator = false)
+	public String masterMenu() {
+        return "/masterMenu/index.jsp";
+	}
 }

@@ -36,14 +36,11 @@ public class MasterMenuAction {
      */
     @Execute(validator = false)
 	public String logout() {
-        return "/login/index.jsp";
+        return "/login/login.jsp";
 	}
 
     @Execute(validator = false)
 	public String shopRegister() {
         return "/shopRegister/index.jsp";
 	}
-
-
-
 }

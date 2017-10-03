@@ -14,12 +14,12 @@ public class LoginService {
 	 * @param password
 	 * @return
 	 */
-	public int updateSort(String userId, String password)
+	//public int updateSort(String userId, String password)
     {
-        String sql = "UPDATE M_USER SET PASSWORD = '" + password + "' Where ID = '1'";
-        int result = jdbcManager.updateBySql(sql)
-                .execute();
-        return result;
+        //String sql = "UPDATE M_USER SET PASSWORD = '" + password + "' Where ID = '1'";
+        //int result = jdbcManager.updateBySql(sql)
+                //.execute();
+        //return result;
     }
 
 	/**
@@ -28,11 +28,11 @@ public class LoginService {
 	 * @param password
 	 * @return
 	 */
-	public int memberRegistration(String userId, String password)
+	//public int memberRegistration(String userId, String password)
     {
-        String sql = "INSERT INTO M_USER VALUES ('2', '" + userId + "', '" + password + "');";
-        int result = jdbcManager.updateBySql(sql)
-                .execute();
-        return result;
+        //String sql = "INSERT INTO M_USER VALUES ('2', '" + userId + "', '" + password + "');";
+        //int result = jdbcManager.updateBySql(sql)
+                //.execute();
+        //return result;
     }
 }
