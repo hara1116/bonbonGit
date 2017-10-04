@@ -11,12 +11,36 @@
 <title>店舗登録画面</title>
 </head>
 <body>
-<div align="center"></div>
+<div align="right">
+	<s:form method="POST">
+    	<html:submit property="shopInsert" value="登録" />
+    	<input type="button" value="閉じる" onClick="window.close()"  />
+
+	<div align="center">
 	<h1>店舗登録</h1>
-	おす、おらごくう
+		<table border="2">
+			<tr>
+				<td>店舗CD</td>
+				<td><html:text maxlength="10" property="shopCd"/></td>
+			</tr>
+			<tr>
+				<td>店舗名称</td>
+				<td><html:text maxlength="24" property="shopName"/></td>
+			</tr>
+			<tr>
+				<td>地区CD</td>
+				<td><html:text maxlength="3" property="eriaCd"/></td>
+			</tr>
+			<tr>
+				<td>郵便番号</td>
+				<td><html:text maxlength="7" property="postNo"/></td>
+			</tr>
+			<tr>
+				<td>住所</td>
+				<td><html:text maxlength="64" property="address"/></td>
+			</tr>
+		</table>
+	</s:form>
 </div>
-
-
-
 </body>
 </html>

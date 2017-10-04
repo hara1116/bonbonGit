@@ -4,22 +4,21 @@ import javax.annotation.Resource;
 import org.seasar.struts.annotation.Execute;
 import org.seasar.struts.annotation.ActionForm;
 
-import sa.bonbon.form.MasterMenuForm;
-import sa.bonbon.dto.MasterMenuDto;
-import sa.bonbon.service.MasterMenuService;
+import sa.bonbon.form.ShopRegisterForm;
+import sa.bonbon.dto.ShopRegisterDto;
+import sa.bonbon.service.ShopRegisterService;
+
 public class ShopRegisterAction {
 
-	/*
 	@ActionForm
 	@Resource
-	protected MasterMenuForm loginForm;
+	protected ShopRegisterForm shopRegisterForm;
 
 	@Resource
-	public MasterMenuDto masterMenuDto;
+	public ShopRegisterDto shopRegisterDto;
 
 	@Resource
-	protected MasterMenuService masterMenuService;
-	*/
+	protected ShopRegisterService shopRegisterService;
 
 	/**
 	 * 初期表示
@@ -31,12 +30,14 @@ public class ShopRegisterAction {
 	}
 
     /**
-     * ログアウト
+     * 登録処理
      * @return
      */
     @Execute(validator = false)
-	public String logout() {
-        return "/login/index.jsp";
+	public String shopInsert() {
+    	shopRegisterService.shopRegistration(shopRegisterForm.shopCd, shopRegisterForm.shopName,
+    			shopRegisterForm.eriaCd, shopRegisterForm.postNo, shopRegisterForm.address);
+    	return "index.jsp";
 	}
 
 }
