@@ -9,7 +9,9 @@ import org.seasar.framework.container.annotation.tiger.InstanceType;
 public class LoginDto implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	public String id;	
+	public String id;
 	public String userId;
 	public String password;
+	public String name;
+	public String phoneno;
 }

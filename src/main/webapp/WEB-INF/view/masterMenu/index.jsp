@@ -7,8 +7,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-<style>
-</style>
 <script>
 $(function() {
 	// 1.ボタン1が押されたときの動作
@@ -29,6 +27,7 @@ $(function() {
 		});
 	});
 });
+
 </script>
 <link rel="stylesheet" type="text/css" href="${f:url('/css/mastermenu.css')}" />
 <link rel="stylesheet" type="text/css" href="${f:url('/css/lightbox.css')}">
@@ -44,36 +43,12 @@ $(function() {
 
 	<!-- サブメニュー（左カラム） -->
 	<div id="submenu">
-		<!-- <font siza="1" align="left">従業員CD:TEST000001</font><br>
-		<font siza="1" align="left">従業員名:テスト 太郎</font> -->
 		<p align="left">従業員CD:TEST000001</p>
 		<p align="left">従業員名:テスト 太郎</p>
-		<div id="submenu_header">従業員情報管理</div>
-		<ul id="submenu_body">
-			<div id="profile" style="display:none;">
-			<table class="type11">
-				<thead>
-				<tr>
-					<th scope="cols">従業員CD</th>
-					<th scope="cols">名前</th>
-					<th scope="cols">電話番号</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr>
-					<td>TEST000001</th>
-					<td>テスト 太郎</th>
-					<td>09012345678</th>
-				</tr>
-				</tbody>
-			</table>
-			</div>
-			<div style="display:inline-flex" align="center">
-			<input type="button" id="id1" value="アドミン情報" />
+			<div align="left">
 			<s:form method="POST"><html:submit property="logout" value="ログアウト"/></s:form>
 			</div>
-		</ul><br>
-
+	<br>
 		<div Align="left">
 			<a href="i${f:url('/images/office.gif')}" data-lightbox="オフィス"><img src=${f:url('/images/office.gif')} width="300" height="320"/></a>
 		</div>
@@ -88,12 +63,14 @@ $(function() {
 			</div>
 			<div class="nav" align="center">
 			<s:form method="POST">
+			<span style="cursor: hand; cursor:pointer;">
 				<ul class="nl">
-				<s:link href="#">・社員登録</s:link><br>
-				<s:link href="/shopRegister/shopRegister">・店舗登録</s:link><br>
-				<s:link href="#">・社員検索</s:link><br>
-				<s:link href="#">・店舗検索</s:link><br>
+				<li><a href="#">・社員登録</a></li><br>
+				<li><a onclick="window.open('/bonbon/shopRegister/shopRegister', '店舗登録', 'width=800,height=700');">・店舗登録</a></li><br>
+				<li><a href="#">・社員検索</a></li><br>
+				<li><a href="#">・店舗検索</a></li><br>
 				</ul>
+			</span>
 			</s:form>
 			</div>
 		</div>

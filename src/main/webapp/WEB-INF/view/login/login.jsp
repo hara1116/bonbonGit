@@ -4,13 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>ログイン画面</title>
 </head>
 <body>
     <div align="center">
     	<div align="right">
-    		<s:submit property="userRegist" value="従業員登録" />
+		<s:form method="POST">
+    		<s:submit property="userregist" value="従業員登録" />
+    	</s:form>
     	</div>
     	<br>
     	<br>
@@ -19,6 +20,7 @@
 		<s:form method="POST">
 			ログインID:<html:text maxlength="10" property="userId" /><br>
 			パスワード:<html:password maxlength="10" property="password" /><br>
+			<br>
 			<html:submit property="masterMenu" value="ログイン"/>
 		</s:form>
 	</div>

@@ -4,5 +4,5 @@ DefaultRootPackage=sa.bonbon
 DefaultSrcPath=/bonbon/src/main/java
 ServletPath=/bonbon
 ViewType=SA-Struts
-WebContentsRoot=src/main/webapp/
+WebContentsRoot=WebContent
 eclipse.preferences.version=1

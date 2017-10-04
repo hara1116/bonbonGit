@@ -28,11 +28,11 @@ public class LoginService {
 	 * @param password
 	 * @return
 	 */
-	//public int memberRegistration(String userId, String password)
+	public int memberRegistration(String userId, String password)
     {
-        //String sql = "INSERT INTO M_USER VALUES ('2', '" + userId + "', '" + password + "');";
-        //int result = jdbcManager.updateBySql(sql)
-                //.execute();
-        //return result;
+        String sql = "UPDATE SA.SA.M_ADMIN SET END_YMD = 20171231 WHERE ADMIN_CD = '" + userId + "'";
+        int result = jdbcManager.updateBySql(sql)
+                .execute();
+        return result;
     }
 }
