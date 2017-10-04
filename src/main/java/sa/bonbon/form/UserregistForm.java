@@ -2,8 +2,12 @@ package sa.bonbon.form;
 
 public class UserregistForm {
 
-	public String userId;
+	/** 従業員CD */
+	public String adminCd;
+	/** パスワード */
 	public String password;
-	public String name;
-	public String phoneno;
+	/** 名前 */
+	public String adminName;
+	/** 電話番号 */
+	public String telNo;
 }
