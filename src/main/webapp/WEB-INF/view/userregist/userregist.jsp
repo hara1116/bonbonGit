@@ -29,10 +29,10 @@
 		<s:form method="POST">
 			入力ファーム
 			<br>
-			ログインID:<html:text maxlength="10" property="userId" /><br>
+			ログインID:<html:text maxlength="10" property="adminCd" /><br>
 			パスワード:<html:password maxlength="10" property="password" /><br>
-			名前:<html:password maxlength="10" property="name" /><br>
-			電話番号:<html:password maxlength="10" property="phoneno" /><br>
+			名前:<html:password maxlength="10" property="adminName" /><br>
+			電話番号:<html:password maxlength="10" property="telNo" /><br>
 			<html:submit property="masterMenu" value="ログイン"/>
 		</s:form>
 	</div>

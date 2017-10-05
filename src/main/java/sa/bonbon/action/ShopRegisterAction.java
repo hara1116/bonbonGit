@@ -35,8 +35,7 @@ public class ShopRegisterAction {
      */
     @Execute(validator = false)
 	public String shopInsert() {
-    	shopRegisterService.shopRegistration(shopRegisterForm.shopCd, shopRegisterForm.shopName,
-    			shopRegisterForm.eriaCd, shopRegisterForm.postNo, shopRegisterForm.address);
+    	shopRegisterService.shopRegistration(shopRegisterForm);
     	return "index.jsp";
 	}
 

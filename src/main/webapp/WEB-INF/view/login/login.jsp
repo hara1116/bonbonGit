@@ -10,7 +10,7 @@
     <div align="center">
     	<div align="right">
 		<s:form method="POST">
-    		<s:submit property="userregist" value="従業員登録" />
+    		<li><a onclick="window.open('/bonbon/userregist/index', '店舗登録', 'width=500,height=500');">・店舗登録</a></li><br>
     	</s:form>
     	</div>
     	<br>
@@ -18,7 +18,7 @@
     	<br>
 	<h1>カラオケBonBon管理システム</h1>
 		<s:form method="POST">
-			ログインID:<html:text maxlength="10" property="userId" /><br>
+			ログインID:<html:text maxlength="10" property="adminCd" /><br>
 			パスワード:<html:password maxlength="10" property="password" /><br>
 			<br>
 			<html:submit property="masterMenu" value="ログイン"/>

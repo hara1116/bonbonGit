@@ -5,7 +5,7 @@ import javax.annotation.Resource;
 import org.seasar.struts.annotation.ActionForm;
 import org.seasar.struts.annotation.Execute;
 
-import sa.bonbon.dto.ShopRegisterDto;
+import sa.bonbon.dto.UserregistDto;
 import sa.bonbon.form.UserregistForm;
 import sa.bonbon.service.UserregistService;
 
@@ -16,7 +16,7 @@ public class UserregistAction {
 	protected UserregistForm userregistForm;
 
 	@Resource
-	public ShopRegisterDto shopRegisterDto;
+	public UserregistDto userregistDto;
 
 	@Resource
 	protected UserregistService userRegisterService;
