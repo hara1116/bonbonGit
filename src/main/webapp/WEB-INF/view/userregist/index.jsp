@@ -13,35 +13,17 @@
 <body>
 <div align="right">
 	<s:form method="POST">
-    	<html:submit property="shopInsert" value="登録" />
+    	<html:submit property="userRegistration" value="登録" />
     	<input type="button" value="閉じる" onClick="window.close()"  />
-		<div align="center">
-		<html:errors />
-		<h1>店舗登録</h1>
-			<table border="2">
-				<tr>
-					<td>店舗CD</td>
-					<td><html:text maxlength="10" property="shopCd"/></td>
-				</tr>
-				<tr>
-					<td>店舗名称</td>
-					<td><html:text maxlength="24" property="shopName"/></td>
-				</tr>
-				<tr>
-					<td>地区CD</td>
-					<td><html:text maxlength="3" property="eriaCd"/></td>
-				</tr>
-				<tr>
-					<td>郵便番号</td>
-					<td><html:text maxlength="7" property="postNo"/></td>
-				</tr>
-				<tr>
-					<td>住所</td>
-					<td><html:text maxlength="64" property="address"/></td>
-				</tr>
-			</table>
-		</div>
+
+	<div align="center">
+	<h1>店舗登録</h1>
+			ログインID:<html:text maxlength="10" property="adminCd" /><br>
+			パスワード:<html:password maxlength="10" property="password" /><br>
+			名前:<html:text maxlength="10" property="adminName" /><br>
+			電話番号:<html:text maxlength="10" property="telNo" /><br>
 	</s:form>
 </div>
+
 </body>
 </html>

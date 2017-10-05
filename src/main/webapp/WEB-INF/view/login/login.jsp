@@ -4,13 +4,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
 <title>ログイン画面</title>
 </head>
 <body>
     <div align="center">
     	<div align="right">
 		<s:form method="POST">
-    		<li><a onclick="window.open('/bonbon/userregist/index', '店舗登録', 'width=500,height=500');">・店舗登録</a></li><br>
+    		<s:submit value="従業員登録" onclick="window.open('/bonbon/userregist/userregist', '店舗登録', 'width=500,height=500');"/>
     	</s:form>
     	</div>
     	<br>

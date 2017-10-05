@@ -22,7 +22,7 @@ public class LoginAction {
 	/**従業員登録画面への遷移実行メソッド*/
     @Execute(validator = false)
 	public String userregist() {
-        return "/userregist/userregist.jsp";
+        return "/userregist/index.jsp";
 	}
 
 	/**ログイン画面の実行メソッド*/

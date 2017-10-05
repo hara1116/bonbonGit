@@ -5,6 +5,7 @@ import javax.annotation.Resource;
 import org.seasar.struts.annotation.ActionForm;
 import org.seasar.struts.annotation.Execute;
 
+import sa.bonbon.dto.ShopRegisterDto;
 import sa.bonbon.dto.UserregistDto;
 import sa.bonbon.form.UserregistForm;
 import sa.bonbon.service.UserregistService;
@@ -19,20 +20,20 @@ public class UserregistAction {
 	public UserregistDto userregistDto;
 
 	@Resource
-	protected UserregistService userRegisterService;
+	protected UserregistService userregistService;
 
 	/**入力画面の実行メソッド*/
     @Execute(validator = false)
-	public String index() {
-        return "userregist.jsp";
+	public String userregist() {
+        return "index.jsp";
 	}
     /**
      * 登録処理
      * @return
      */
     @Execute(validator = false)
-	public String shopInsert() {
-    	userRegisterService.userRegistration(userregistForm.adminCd, userregistForm.password,
+	public String userRegistration() {
+    	userregistService.userRegistration(userregistForm.adminCd, userregistForm.password,
     			userregistForm.adminName, userregistForm.telNo);
     	return "index.jsp";
 	}
