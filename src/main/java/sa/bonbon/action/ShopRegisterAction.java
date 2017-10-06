@@ -40,9 +40,23 @@ public class ShopRegisterAction {
      * @return
      */
     @Execute(validator = true, input="index.jsp")
-	public String shopInsert() {
-    	shopRegisterService.shopRegistration(shopRegisterForm);
-    	message = "登録が完了しました。";
-    	return "after.jsp";
+	public String shopInsert() throws Exception {
+    	try {
+	    	shopRegisterService.shopRegistration(shopRegisterForm);
+	    	message = "登録が完了しました。";
+	    	return "after.jsp";
+    	} catch (Exception e) {
+    		message = "登録に失敗しました。";
+    		return "index.jsp";
+    	}
+	}
+
+    /**
+     * 戻る
+     * @return
+     */
+    @Execute(validator = false)
+	public String backMenu() {
+        return "/masterMenu/index.jsp";
 	}
 }

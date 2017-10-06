@@ -21,8 +21,8 @@
 	<div id="submenu">
 		<div align="left">
 			<s:form method="POST"><html:submit property="logout" value="ログアウト"/></s:form>
-			従業員CD:TEST000001<br>
-			従業員名:テスト 太郎
+			従業員CD:${f:h(adminCd)}<br>
+			従業員名:${f:h(adminName)}
 		</div>
 		<div Align="left">
 			<a href="i${f:url('/images/office.gif')}" data-lightbox="オフィス"><img src=${f:url('/images/office.gif')} width="300" height="320"/></a>
@@ -39,8 +39,10 @@
 				<s:form method="POST">
 					<span style="cursor: hand; cursor:pointer;">
 						<ul class="nl">
+							<html:hidden property="adminCd" value="${f:h(adminCd)}"/>
 							<li><a href="#">・社員登録</a></li><br>
-							<li><a onclick="window.open('/bonbon/shopRegister/shopRegister', '店舗登録', 'width=500,height=500');">・店舗登録</a></li><br>
+							<!--  <li><a onclick="window.open('/bonbon/shopRegister/shopRegister', '店舗登録', 'width=500,height=500');">・店舗登録</a></li><br> -->
+							<li><a property="shop">・店舗登録</a></li><br>
 							<li><a href="#">・社員検索</a></li><br>
 							<li><a href="#">・店舗検索</a></li><br>
 						</ul>

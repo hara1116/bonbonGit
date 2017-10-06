@@ -21,5 +21,7 @@ public class ShopRegisterForm {
 	/** 住所 */
 	@Required
 	public String address;
+	/** 従業員CD */
+	public String adminCd;
 
 }

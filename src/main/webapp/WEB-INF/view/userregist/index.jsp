@@ -15,15 +15,29 @@
 	<s:form method="POST">
     	<html:submit property="userRegistration" value="登録" />
     	<input type="button" value="閉じる" onClick="window.close()"  />
-
-	<div align="center">
-	<h1>店舗登録</h1>
-			ログインID:<html:text maxlength="10" property="adminCd" /><br>
-			パスワード:<html:password maxlength="10" property="password" /><br>
-			名前:<html:text maxlength="10" property="adminName" /><br>
-			電話番号:<html:text maxlength="10" property="telNo" /><br>
+		<div align="center">
+			<h1>従業員登録</h1>
+			<table border="0">
+				<caption>入力フォーム</caption>
+				<tr>
+					<td>ログインID<td>
+					<td><html:text maxlength="10" property="adminCd" /></td>
+				</tr>
+				<tr>
+					<td>パスワード<td>
+					<td><html:password maxlength="10" property="password" /></td>
+				</tr>
+				<tr>
+					<td>名前<td>
+					<td><html:text maxlength="10" property="adminName" /></td>
+				</tr>
+				<tr>
+					<td>電話番号<td>
+					<td><html:text maxlength="10" property="telNo" /></td>
+				</tr>
+			</table>
+		</div>
 	</s:form>
 </div>
-
 </body>
 </html>

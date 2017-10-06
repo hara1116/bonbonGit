@@ -9,17 +9,15 @@ import sa.bonbon.dto.MasterMenuDto;
 import sa.bonbon.service.MasterMenuService;
 public class MasterMenuAction {
 
-	/*
 	@ActionForm
 	@Resource
-	protected MasterMenuForm loginForm;
+	protected MasterMenuForm masterMenuForm;
 
 	@Resource
 	public MasterMenuDto masterMenuDto;
 
 	@Resource
 	protected MasterMenuService masterMenuService;
-	*/
 
 	/**
 	 * 初期表示

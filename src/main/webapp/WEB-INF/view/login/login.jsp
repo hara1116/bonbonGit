@@ -22,8 +22,17 @@
     	<br>
 	<h1>カラオケBonBon管理システム</h1>
 		<s:form method="POST">
-			ログインID:<html:text maxlength="10" property="adminCd" /><br>
-			パスワード:<html:password maxlength="10" property="password" /><br>
+			<table border="0">
+				<caption>ログイン入力</caption>
+				<tr>
+					<td>ログインID<td>
+					<td><html:text maxlength="10" property="adminCd" /></td>
+				</tr>
+				<tr>
+					<td>パスワード<td>
+					<td><html:password maxlength="10" property="password" /></td>
+				</tr>
+			</table>
 			<br>
 			<html:submit property="masterMenu" value="ログイン"/>
 		</s:form>

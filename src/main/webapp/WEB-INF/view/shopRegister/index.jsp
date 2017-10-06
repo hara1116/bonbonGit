@@ -14,10 +14,11 @@
 <div align="right">
 	<s:form method="POST">
     	<html:submit property="shopInsert" value="登録" />
-    	<input type="button" value="閉じる" onClick="window.close()"  />
+    	<html:submit value="戻る" property="backMenu"  />
 		<div align="center">
 		<html:errors />
 		<h1>店舗登録</h1>
+			${f:h(message)}
 			<table border="2">
 				<tr>
 					<td>店舗CD</td>
@@ -41,6 +42,7 @@
 				</tr>
 			</table>
 		</div>
+		<html:hidden property="adminCd" />
 	</s:form>
 </div>
 </body>
