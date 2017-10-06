@@ -11,7 +11,7 @@ import sa.bonbon.dto.UserregistDto;
 import sa.bonbon.form.UserregistForm;
 import sa.bonbon.service.UserregistService;
 
-public class UserregistAction {
+public class EmployeeRegistAction {
 	/**アクションフォーム*/
 	@Resource
 	@ActionForm

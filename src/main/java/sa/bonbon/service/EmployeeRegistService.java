@@ -13,7 +13,7 @@ import org.seasar.framework.container.SingletonS2Container;
 import sa.bonbon.entity.MAdmin;
 import sa.bonbon.form.UserregistForm;
 
-public class UserregistService {
+public class EmployeeRegistService {
 
 	@Resource
 	private JdbcManager jdbcManager = SingletonS2Container.getComponent("jdbcManager");

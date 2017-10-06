@@ -7,6 +7,12 @@ import org.seasar.struts.annotation.ActionForm;
 import sa.bonbon.form.MasterMenuForm;
 import sa.bonbon.dto.MasterMenuDto;
 import sa.bonbon.service.MasterMenuService;
+
+/**
+ * マスタ管理メニューのアクション
+ * @author t.hara
+ *
+ */
 public class MasterMenuAction {
 
 	@ActionForm
@@ -37,6 +43,10 @@ public class MasterMenuAction {
         return "/login/login.jsp";
 	}
 
+    /**
+     * 店舗登録画面を開く
+     * @return
+     */
     @Execute(validator = false)
 	public String shopRegister() {
         return "/shopRegister/index.jsp";

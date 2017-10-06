@@ -6,12 +6,21 @@ import org.seasar.struts.annotation.ActionForm;
 import org.seasar.struts.annotation.Execute;
 
 import sa.bonbon.form.LoginForm;
+import sa.bonbon.service.LoginService;
+import sa.bonbon.service.UserregistService;
 
 public class LoginAction {
 	/**アクションフォーム*/
 	@Resource
 	@ActionForm
 	protected LoginForm loginForm;
+
+	/**Service*/
+	@Resource
+	protected LoginService loginService;
+
+	/**承認処理後のメッセージ*/
+	public String message;
 
 	/**ログイン画面の実行メソッド*/
     @Execute(validator = false)
@@ -28,6 +37,17 @@ public class LoginAction {
 	/**ログイン画面の実行メソッド*/
     @Execute(validator = false)
 	public String masterMenu() {
-        return "/masterMenu/index.jsp";
-	}
+    	int count=0;
+    	try {
+    		count =loginService.login(loginForm.adminCd,loginForm.password);
+    	} catch (Exception e) {
+    		message = "検索に失敗しました。";
+    		return "login.jsp";
+    	}
+		if(count == 0){
+    		message = "登録されておりませんよ";
+			return "login.jsp";
+		}
+		return "/masterMenu/index.jsp";
+    }
 }

@@ -4,6 +4,11 @@ import org.seasar.struts.annotation.Required;
 
 import antlr.collections.List;
 
+/**
+ * 店舗登録画面のフォーム
+ * @author t.hara
+ *
+ */
 public class ShopRegisterForm {
 
 	/** 店舗CD */
@@ -23,5 +28,4 @@ public class ShopRegisterForm {
 	public String address;
 	/** 従業員CD */
 	public String adminCd;
-
 }

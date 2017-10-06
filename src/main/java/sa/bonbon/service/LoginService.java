@@ -23,16 +23,20 @@ public class LoginService {
     }
 
 	/**
-	 * 会員登録
+	 * ログイン認証
 	 * @param userId
 	 * @param password
 	 * @return
 	 */
-	public int memberRegistration(String userId, String password)
+	public int login(String userId, String password)
     {
-        String sql = "UPDATE SA.SA.M_ADMIN SET END_YMD = 20171231 WHERE ADMIN_CD = '" + userId + "'";
-        int result = jdbcManager.updateBySql(sql)
-                .execute();
-        return result;
+        String sql = "SELECT COUNT(*) FROM M_ADMIN WHERE ADMIN_CD = '" + userId + "' AND PASSWORD = '" + password + "'";
+        Integer count =
+        	    jdbcManager
+        	        .selectBySql(
+        	            Integer.class,
+        	            sql)
+        	        .getSingleResult();
+        return count;
     }
 }

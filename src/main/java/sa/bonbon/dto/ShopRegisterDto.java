@@ -5,8 +5,15 @@ import java.io.Serializable;
 import org.seasar.framework.container.annotation.tiger.Component;
 import org.seasar.framework.container.annotation.tiger.InstanceType;
 
+/**
+ * 店舗登録画面のDTO
+ * @author t.hara
+ *
+ */
 @Component(instance = InstanceType.SESSION)
 public class ShopRegisterDto implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	/** 店舗コード */
 	public String shopCd;

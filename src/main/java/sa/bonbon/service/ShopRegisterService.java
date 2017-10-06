@@ -12,6 +12,11 @@ import org.seasar.framework.container.SingletonS2Container;
 import sa.bonbon.entity.MShop;
 import sa.bonbon.form.ShopRegisterForm;
 
+/**
+ * 店舗登録画面のサービス
+ * @author t.hara
+ *
+ */
 public class ShopRegisterService {
 
 	@Resource
@@ -25,10 +30,12 @@ public class ShopRegisterService {
 	 */
 	public int shopRegistration(ShopRegisterForm shopRegisterForm) {
 
+		// 当日日付を取得
 		DateFormat df1 = new SimpleDateFormat("yyyyMMdd");
         Date date1 = new Date();
         String today = df1.format(date1);
 
+        // Entityに値を詰める
         MShop entity = new MShop();
         entity.shopCd = shopRegisterForm.shopCd;
         entity.shopName = shopRegisterForm.shopName;
@@ -42,6 +49,7 @@ public class ShopRegisterService {
         entity.createDate = new Timestamp(System.currentTimeMillis());
         entity.lastupdate = new Timestamp(System.currentTimeMillis());
 
+        // 登録処理
         return jdbcManager.insert(entity).execute();
     }
 }

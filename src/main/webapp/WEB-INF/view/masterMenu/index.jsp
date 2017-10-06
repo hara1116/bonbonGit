@@ -41,16 +41,16 @@
 						<ul class="nl">
 							<html:hidden property="adminCd" value="${f:h(adminCd)}"/>
 							<li><a href="#">・社員登録</a></li><br>
-							<!--  <li><a onclick="window.open('/bonbon/shopRegister/shopRegister', '店舗登録', 'width=500,height=500');">・店舗登録</a></li><br> -->
-							<li><a property="shop">・店舗登録</a></li><br>
+							<li><a onclick="window.open('/bonbon/shopRegister/shopRegister?adminCd=${f:h(adminCd)}', '店舗登録', 'width=500,height=500');">・店舗登録</a></li><br>
 							<li><a href="#">・社員検索</a></li><br>
-							<li><a href="#">・店舗検索</a></li><br>
+							<li><a onclick="window.open('/bonbon/shopSearch/shopSearch?adminCd=${f:h(adminCd)}', '店舗検索', 'width=1000,height=600');">・店舗検索</a></li><br>
 						</ul>
 					</span>
 				</s:form>
 			</div>
 		</div>
 	</div>
+
 	<!-- フッタ -->
 	<div id="footer">
 		<address>Copyright (c) SA CONSULTING All Rights Reserved.</address>

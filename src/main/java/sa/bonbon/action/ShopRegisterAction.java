@@ -13,6 +13,11 @@ import sa.bonbon.form.ShopRegisterForm;
 import sa.bonbon.dto.ShopRegisterDto;
 import sa.bonbon.service.ShopRegisterService;
 
+/**
+ * 店舗登録画面のアクション
+ * @author t.hara
+ *
+ */
 public class ShopRegisterAction {
 
 	@ActionForm
@@ -25,7 +30,9 @@ public class ShopRegisterAction {
 	@Resource
 	protected ShopRegisterService shopRegisterService;
 
+	/** メッセージ表示用 */
 	public String message;
+
 	/**
 	 * 初期表示
 	 * @return
@@ -49,14 +56,5 @@ public class ShopRegisterAction {
     		message = "登録に失敗しました。";
     		return "index.jsp";
     	}
-	}
-
-    /**
-     * 戻る
-     * @return
-     */
-    @Execute(validator = false)
-	public String backMenu() {
-        return "/masterMenu/index.jsp";
 	}
 }

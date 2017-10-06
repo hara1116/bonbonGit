@@ -23,7 +23,7 @@
 	<h1>カラオケBonBon管理システム</h1>
 		<s:form method="POST">
 			<table border="0">
-				<caption>ログイン入力</caption>
+				<caption>${f:h(message)}</caption>
 				<tr>
 					<td>ログインID<td>
 					<td><html:text maxlength="10" property="adminCd" /></td>

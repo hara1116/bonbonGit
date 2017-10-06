@@ -21,23 +21,23 @@
 			<table border="2">
 				<tr>
 					<td>店舗CD</td>
-					<td><html:text maxlength="10" property="shopCd" value="${f:h(shopCd)}" disabled="disabled"/></td>
+					<td><html:text maxlength="10" property="shopCd" value="${f:h(shopCd)}" disabled="true"/></td>
 				</tr>
 				<tr>
 					<td>店舗名称</td>
-					<td><html:text maxlength="24" property="shopName" value="${f:h(shopName)}"/></td>
+					<td><html:text maxlength="24" property="shopName" value="${f:h(shopName)}" disabled="true"/></td>
 				</tr>
 				<tr>
 					<td>地区CD</td>
-					<td><html:text maxlength="3" property="eriaCd" value="${f:h(eriaCd)}"/></td>
+					<td><html:text maxlength="3" property="eriaCd" value="${f:h(eriaCd)}" disabled="true"/></td>
 				</tr>
 				<tr>
 					<td>郵便番号</td>
-					<td><html:text maxlength="7" property="postNo" value="${f:h(postNo)}"/></td>
+					<td><html:text maxlength="7" property="postNo" value="${f:h(postNo)}" disabled="true"/></td>
 				</tr>
 				<tr>
 					<td>住所</td>
-					<td><html:text maxlength="64" property="address" value="${f:h(address)}"/></td>
+					<td><html:text maxlength="64" property="address" value="${f:h(address)}" disabled="true"/></td>
 				</tr>
 			</table>
 		</div>
