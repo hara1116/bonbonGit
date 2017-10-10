@@ -14,7 +14,7 @@ import sa.bonbon.form.UserregistForm;
 import sa.bonbon.service.EmployeeRegistService;
 import sa.bonbon.service.UserregistService;
 
-public class EmployeeRegistAction {
+public class EmployeeInformationAction {
 	/**アクションフォーム*/
 	@Resource
 	@ActionForm
@@ -33,8 +33,8 @@ public class EmployeeRegistAction {
 
 	/**初期表示*/
     @Execute(validator = false)
-	public String employeeRegist() {
-        return "/employeeRegist/index.jsp";
+	public String employeeInformation() {
+        return "/employeeInformation/index.jsp";
 	}
     /**
      * 登録処理
@@ -72,4 +72,12 @@ public class EmployeeRegistAction {
     		return "index.jsp";
     	}
     }
+    /**
+     * 社員情報画面を開く
+     * @return
+     */
+    @Execute(validator = false)
+	public String employeeSearch() {
+        return "/employeeSearch/index.jsp";
+	}
 }

@@ -1,6 +1,6 @@
 package sa.bonbon.form;
 
-public class EmployeeRegistForm {
+public class EmployeeSearchForm {
 
 	/** 従業員CD */
 	public String adminCd;

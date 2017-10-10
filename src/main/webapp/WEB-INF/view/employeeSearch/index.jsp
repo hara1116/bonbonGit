@@ -8,16 +8,17 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 
-<title>社員登録画面</title>
+<title>社員検索画面</title>
 </head>
 <body>
 <div align="right">
 	<s:form method="POST">
-    	<html:submit property="employeeRegistration" value="登録" />
+    	<html:submit property="employeeSearchImp" value="検索 "/>
+    	<html:submit property="employeeInformation" value="社員情報" />
     	<input type="button" value="閉じる" onClick="window.close()"  />
 		<div align="center">
-			<h1>社員登録</h1>
-			<table border="2">
+			<h1>社員検索</h1>
+			<table border="0">
 				<caption>${f:h(message)}</caption>
 				<tr>
 					<td>社員CD<td>
@@ -40,6 +41,7 @@
 					<td>男性：<html:radio property="sex" value="1"/>女性：<html:radio property="sex" value="2"/></td>
 				</tr>
 			</table>
+			<s:submit value="社員検索" onclick="window.open('/bonbon/employeeInformation/employeeInformation', '社員検索', 'width=500,height=500');"/>
 		</div>
 	</s:form>
 </div>

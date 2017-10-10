@@ -51,4 +51,13 @@ public class MasterMenuAction {
 	public String shopRegister() {
         return "/shopRegister/index.jsp";
 	}
+    /**
+     * 社員登録画面を開く
+     * @return
+     */
+    @Execute(validator = false)
+	public String employeeRegist() {
+        return "/employeeRegist/index.jsp";
+	}
+
 }
