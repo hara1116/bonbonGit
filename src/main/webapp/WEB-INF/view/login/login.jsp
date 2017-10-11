@@ -35,6 +35,7 @@
 			</table>
 			<br>
 			<html:submit property="masterMenu" value="ログイン"/>
+			<html:hidden property="adminName"/>
 		</s:form>
 	</div>
 </body>
