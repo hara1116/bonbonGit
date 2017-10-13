@@ -2,7 +2,6 @@ package sa.bonbon.action;
 
 import javax.annotation.Resource;
 
-import org.h2.util.StringUtils;
 import org.seasar.struts.annotation.ActionForm;
 import org.seasar.struts.annotation.Execute;
 
@@ -40,27 +39,6 @@ public class UserregistAction {
 	 */
 	@Execute(validator = true, input = "index.jsp")
 	public String userRegistration() throws Exception {
-
-		// ログインID
-		if (StringUtils.isNullOrEmpty(userregistForm.adminCd)) {
-			message = "ログインIDが入力されていません";
-			return "index.jsp";
-		}
-		// パスワード
-		if (StringUtils.isNullOrEmpty(userregistForm.password)) {
-			message = "パスワードが入力されていません";
-			return "index.jsp";
-		}
-		// 名前
-		if (StringUtils.isNullOrEmpty(userregistForm.adminName)) {
-			message = "名前が入力されていません";
-			return "index.jsp";
-		}
-		// 電話番号
-		if (StringUtils.isNullOrEmpty(userregistForm.telNo)) {
-			message = "電話番号が入力されていません";
-			return "index.jsp";
-		}
 		try {
 			userregistService.userRegistration(userregistForm);
 			message = "登録が完了しました。";

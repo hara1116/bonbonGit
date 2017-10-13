@@ -16,8 +16,8 @@
     	<html:submit property="employeeRegist" value="続けて登録" />
     	<input type="button" value="閉じる" onClick="window.close()"  />
 		<div align="center">
-			<html:errors />
 			<h1>社員登録</h1>
+			<html:errors />
 			${f:h(message)}
 			<table border="2">
 				<tr>
@@ -25,8 +25,16 @@
 					<td><html:text maxlength="10" property="employeeCd" disabled="true" /></td>
 				</tr>
 				<tr>
+					<td>パスワード</td>
+					<td><html:text maxlength="10" property="password" disabled="true" /></td>
+				</tr>
+				<tr>
 					<td>名前</td>
 					<td><html:text maxlength="32" property="employeeName" disabled="true" /></td>
+				</tr>
+				<tr>
+					<td>電話番号</td>
+					<td><html:text maxlength="12" property="telNo" disabled="true" /></td>
 				</tr>
 				<tr>
 					<td>所属店舗</td>

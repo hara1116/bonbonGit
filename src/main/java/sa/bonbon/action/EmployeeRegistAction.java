@@ -2,7 +2,6 @@ package sa.bonbon.action;
 
 import javax.annotation.Resource;
 
-import org.h2.util.StringUtils;
 import org.seasar.struts.annotation.ActionForm;
 import org.seasar.struts.annotation.Execute;
 
@@ -41,31 +40,6 @@ public class EmployeeRegistAction {
 	@Execute(validator = true, input = "index.jsp")
 	public String employeeRegistration() throws Exception {
 
-		// 社員CD
-		if (StringUtils.isNullOrEmpty(employeeRegistForm.employeeCd)) {
-			message = "社員CDが入力されていません";
-			return "index.jsp";
-		}
-		// 名前
-		if (StringUtils.isNullOrEmpty(employeeRegistForm.employeeName)) {
-			message = "名前が入力されていません";
-			return "index.jsp";
-		}
-		// 所属店舗
-		if (StringUtils.isNullOrEmpty(employeeRegistForm.shozokuShop)) {
-			message = "所属店舗が入力されていません";
-			return "index.jsp";
-		}
-		// 生年月日
-		if (StringUtils.isNullOrEmpty(employeeRegistForm.birthDay)) {
-			message = "生年月日が入力されていません";
-			return "index.jsp";
-		}
-		// 性別
-		if (StringUtils.isNullOrEmpty(employeeRegistForm.sex)) {
-			message = "性別を選択してください";
-			return "index.jsp";
-		}
 		try {
 			employeeRegistService.employeeRegist(employeeRegistForm);
 			message = "登録が完了しました。";

@@ -16,8 +16,8 @@
     	<html:submit property="userRegistration" value="登録" />
     	<input type="button" value="閉じる" onClick="window.close()"  />
 		<div align="center">
-		<html:errors />
 			<h1>従業員登録</h1>
+			<html:errors />
 			${f:h(message)}
 			<table border="0">
 				<tr>
