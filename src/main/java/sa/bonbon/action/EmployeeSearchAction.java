@@ -1,18 +1,12 @@
 package sa.bonbon.action;
 
 import javax.annotation.Resource;
-
 import org.h2.util.StringUtils;
 import org.seasar.struts.annotation.ActionForm;
 import org.seasar.struts.annotation.Execute;
-
 import sa.bonbon.dto.EmployeeRegistDto;
-import sa.bonbon.dto.ShopRegisterDto;
-import sa.bonbon.dto.UserregistDto;
 import sa.bonbon.form.EmployeeRegistForm;
-import sa.bonbon.form.UserregistForm;
 import sa.bonbon.service.EmployeeRegistService;
-import sa.bonbon.service.UserregistService;
 
 public class EmployeeSearchAction {
 	/**アクションフォーム*/

@@ -2,8 +2,6 @@ package sa.bonbon.form;
 
 import org.seasar.struts.annotation.Required;
 
-import antlr.collections.List;
-
 /**
  * 店舗登録画面のフォーム
  * @author t.hara

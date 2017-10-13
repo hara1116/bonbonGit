@@ -7,7 +7,7 @@ import org.seasar.framework.container.annotation.tiger.InstanceType;
 
 @Component(instance = InstanceType.SESSION)
 public class EmployeeInformationDto implements Serializable {
-
+	private static final long serialVersionUID = 1L;
 	/** 従業員CD */
 	public String adminCd;
 	/** パスワード */

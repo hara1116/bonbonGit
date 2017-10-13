@@ -8,7 +8,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 
-<title>店舗登録画面</title>
+<title>従業員登録</title>
 </head>
 <body>
 <div align="right">
@@ -16,24 +16,25 @@
     	<html:submit property="userRegistration" value="登録" />
     	<input type="button" value="閉じる" onClick="window.close()"  />
 		<div align="center">
+		<html:errors />
 			<h1>従業員登録</h1>
+			${f:h(message)}
 			<table border="0">
-				<caption>${f:h(message)}</caption>
 				<tr>
-					<td>ログインID<td>
-					<td><html:text maxlength="10" property="adminCd" /></td>
+					<td>ログインID</td>
+					<td><html:text maxlength="10" property="adminCd" style="width:100%;"/></td>
 				</tr>
 				<tr>
-					<td>パスワード<td>
-					<td><html:password maxlength="10" property="password" /></td>
+					<td>パスワード</td>
+					<td><html:password maxlength="10" property="password" style="width:100%;"/></td>
 				</tr>
 				<tr>
-					<td>名前<td>
-					<td><html:text maxlength="10" property="adminName" /></td>
+					<td>名前</td>
+					<td><html:text maxlength="10" property="adminName" style="width:100%;"/></td>
 				</tr>
 				<tr>
-					<td>電話番号<td>
-					<td><html:text maxlength="10" property="telNo" /></td>
+					<td>電話番号</td>
+					<td><html:text maxlength="10" property="telNo" style="width:100%;"/></td>
 				</tr>
 			</table>
 		</div>

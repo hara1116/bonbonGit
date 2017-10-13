@@ -4,12 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="${f:url('/css/mastermenu.css')}" />
-<link rel="stylesheet" type="text/css" href="${f:url('/css/lightbox.css')}">
-<script src="${f:url('/js/lightbox.min.js')}"></script>
 <title>カラオケBonBon管理システム</title>
 </head>
 <body>
@@ -21,17 +16,25 @@
 	<div id="submenu">
 		<div align="left">
 			<s:form method="POST"><html:submit property="logout" value="ログアウト"/></s:form>
-			従業員CD:${f:h(adminCd)}<br>
-			従業員名:${f:h(adminName)}
+			<table border="0">
+				<tr>
+					<td align="right">従業員CD:</td>
+					<td>${f:h(adminCd)}</td>
+				</tr>
+				<tr>
+					<td align="right">従業員名:</td>
+					<td>${f:h(adminName)}</td>
+				</tr>
+			</table>
 		</div>
 		<div Align="left">
-			<a href="i${f:url('/images/office.gif')}" data-lightbox="オフィス"><img src=${f:url('/images/office.gif')} width="300" height="320"/></a>
+			<img src=${f:url('/images/office.gif')} width="300" height="320"/>
 		</div>
 	</div>
 
 	<div id="content">
-		<!-- MENU一覧（中央カラム） -->
-		<div id="news">
+		<!-- MENU一覧（メインカラム） -->
+		<div id="main">
 			<div Align="center">
 				<h2>MENU一覧</h2>
 			</div>

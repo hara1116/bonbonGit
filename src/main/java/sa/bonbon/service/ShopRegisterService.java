@@ -30,24 +30,24 @@ public class ShopRegisterService {
 	 */
 	public int shopRegistration(ShopRegisterForm shopRegisterForm) {
 
-		// 当日日付を取得
+		// 当日日付をYYYYMMDD形式で取得
 		DateFormat df1 = new SimpleDateFormat("yyyyMMdd");
         Date date1 = new Date();
         String today = df1.format(date1);
 
         // Entityに値を詰める
         MShop entity = new MShop();
-        entity.shopCd = shopRegisterForm.shopCd;
-        entity.shopName = shopRegisterForm.shopName;
-        entity.eriaCd = shopRegisterForm.eriaCd;
-        entity.address = shopRegisterForm.address;
-        entity.postNo = shopRegisterForm.postNo;
-        entity.startYmd = Integer.parseInt(today);
-        entity.endYmd = 99991231;
-        entity.createUser = shopRegisterForm.adminCd;
-        entity.lastupdateUser = shopRegisterForm.adminCd;
-        entity.createDate = new Timestamp(System.currentTimeMillis());
-        entity.lastupdate = new Timestamp(System.currentTimeMillis());
+        entity.shopCd = shopRegisterForm.shopCd;						// 店舗CD
+        entity.shopName = shopRegisterForm.shopName;					// 店舗名称
+        entity.eriaCd = shopRegisterForm.eriaCd;						// 地区CD
+        entity.address = shopRegisterForm.address;						// 住所
+        entity.postNo = shopRegisterForm.postNo;						// 郵便番号
+        entity.startYmd = Integer.parseInt(today);						// 開始日(YYYYMMDD)
+        entity.endYmd = 99991231;										// 終了日(YYYYMMDD)
+        entity.createUser = shopRegisterForm.adminCd;					// 登録者
+        entity.lastupdateUser = shopRegisterForm.adminCd;				// 最終更新者
+        entity.createDate = new Timestamp(System.currentTimeMillis());	// 登録日
+        entity.lastupdate = new Timestamp(System.currentTimeMillis());	// 最終更新日
 
         // 登録処理
         return jdbcManager.insert(entity).execute();

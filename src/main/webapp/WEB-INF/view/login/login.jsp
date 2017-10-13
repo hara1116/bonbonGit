@@ -20,17 +20,18 @@
     	<br>
     	<br>
     	<br>
-	<h1>カラオケBonBon管理システム</h1>
+		<h1>カラオケBonBon管理システム</h1>
+		<html:errors />
 		<s:form method="POST">
+			${f:h(message)}
 			<table border="0">
-				<caption>${f:h(message)}</caption>
 				<tr>
 					<td>ログインID<td>
-					<td><html:text maxlength="10" property="adminCd" /></td>
+					<td><html:text maxlength="10" property="adminCd" style="width:100%;"/></td>
 				</tr>
 				<tr>
 					<td>パスワード<td>
-					<td><html:password maxlength="10" property="password" /></td>
+					<td><html:password maxlength="10" property="password" style="width:100%;"/></td>
 				</tr>
 			</table>
 			<br>

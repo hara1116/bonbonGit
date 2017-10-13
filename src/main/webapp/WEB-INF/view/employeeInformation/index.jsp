@@ -8,20 +8,21 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 
-<title>社員情報画面</title>
+<title>社員情報変更画面</title>
 </head>
 <body>
 <div align="right">
 	<s:form method="POST">
-    	<html:submit property="employeeRegistration" value="登録" />
-    	<html:submit property="employeeSearch" value="閉じる" />
+	    <html:submit property="employeeDelete" value="削除" />
+    	<html:submit property="employeeUpdate" value="更新" />
+    	<html:submit property="employeeSearch" value="戻る" />
 		<div align="center">
 			<h1>社員情報変更</h1>
 			<table border="0">
 				<caption>${f:h(message)}</caption>
 				<tr>
 					<td>社員CD<td>
-					<td><html:text maxlength="10" property="employeeCd" /></td>
+					<td><html:text maxlength="10" property="employeeCd" disabled="true"/></td>
 				</tr>
 				<tr>
 					<td>名前<td>
@@ -37,6 +38,7 @@
 				</tr>
 			</table>
 		</div>
+		<html:hidden property="employeeCd" />
 	</s:form>
 </div>
 </body>

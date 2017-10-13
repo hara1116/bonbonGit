@@ -7,12 +7,8 @@ import org.seasar.struts.annotation.ActionForm;
 import org.seasar.struts.annotation.Execute;
 
 import sa.bonbon.dto.EmployeeRegistDto;
-import sa.bonbon.dto.ShopRegisterDto;
-import sa.bonbon.dto.UserregistDto;
 import sa.bonbon.form.EmployeeRegistForm;
-import sa.bonbon.form.UserregistForm;
 import sa.bonbon.service.EmployeeRegistService;
-import sa.bonbon.service.UserregistService;
 
 public class EmployeeInformationAction {
 	/**アクションフォーム*/
@@ -37,17 +33,12 @@ public class EmployeeInformationAction {
         return "/employeeInformation/index.jsp";
 	}
     /**
-     * 登録処理
+     * 社員情報更新処理
      * @return
      */
     @Execute(validator = true, input="index.jsp")
-	public String employeeRegistration() throws Exception{
+	public String employeeUpdate() throws Exception{
 
-    	//社員CD
-		if(StringUtils.isNullOrEmpty(employeeRegistForm.employeeCd)){
-    		message = "社員CDが入力されていません";
-			return "index.jsp";
-		}
     	//名前
 		if(StringUtils.isNullOrEmpty(employeeRegistForm.employeeName)){
     		message = "名前が入力されていません";
@@ -65,10 +56,25 @@ public class EmployeeInformationAction {
 		}
     	try {
     		employeeRegistService.employeeRegist(employeeRegistForm);
-    		message = "登録が完了しました。";
+    		message = "更新が完了しました。";
     		return "index.jsp";
     	} catch (Exception e) {
-    		message = "登録に失敗しました。";
+    		message = "更新に失敗しました。";
+    		return "index.jsp";
+    	}
+    }
+    /**
+     * 社員情報削除処理
+     * @return
+     */
+    @Execute(validator = true, input="index.jsp")
+	public String employeeDelete() throws Exception{
+    	try {
+    		employeeRegistService.employeeRegist(employeeRegistForm);
+    		message = "削除が完了しました。";
+    		return "index.jsp";
+    	} catch (Exception e) {
+    		message = "削除に失敗しました。";
     		return "index.jsp";
     	}
     }

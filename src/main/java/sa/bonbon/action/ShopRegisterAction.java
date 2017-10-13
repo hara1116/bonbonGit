@@ -2,12 +2,8 @@ package sa.bonbon.action;
 
 import javax.annotation.Resource;
 
-import org.apache.struts.action.ActionMessage;
-import org.apache.struts.action.ActionMessages;
 import org.seasar.struts.annotation.Execute;
 import org.seasar.struts.annotation.ActionForm;
-import org.seasar.struts.util.ActionMessagesUtil;
-import org.seasar.struts.util.MessageResourcesUtil;
 
 import sa.bonbon.form.ShopRegisterForm;
 import sa.bonbon.dto.ShopRegisterDto;

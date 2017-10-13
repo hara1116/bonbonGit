@@ -8,36 +8,35 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 
-<title>社員検索画面</title>
+<title>従業員登録</title>
 </head>
 <body>
 <div align="right">
 	<s:form method="POST">
-    	<html:submit property="employeeSearchImp" value="検索 "/>
-    	<html:submit property="employeeInformation" value="社員情報変更" />
+    	<html:submit property="userregist" value="続けて登録" />
     	<input type="button" value="閉じる" onClick="window.close()"  />
 		<div align="center">
-			<h1>社員検索</h1>
+		<html:errors />
+			<h1>従業員登録</h1>
+			${f:h(message)}
 			<table border="0">
-				<caption>${f:h(message)}</caption>
 				<tr>
-					<td>社員CD<td>
-					<td><html:text maxlength="10" property="employeeCd" /></td>
+					<td>ログインID</td>
+					<td><html:text maxlength="10" property="adminCd" style="width:100%;" disabled="true" /></td>
 				</tr>
 				<tr>
-					<td>名前<td>
-					<td><html:text maxlength="10" property="employeeName" /></td>
+					<td>パスワード</td>
+					<td><html:password maxlength="10" property="password" style="width:100%;" disabled="true" /></td>
 				</tr>
 				<tr>
-					<td>所属店舗<td>
-					<td><html:text maxlength="10" property="shozokuShop" /></td>
+					<td>名前</td>
+					<td><html:text maxlength="10" property="adminName" style="width:100%;" disabled="true" /></td>
 				</tr>
 				<tr>
-					<td>ステータス<td>
-					<td><html:text maxlength="10" property="status" /></td>
+					<td>電話番号</td>
+					<td><html:text maxlength="10" property="telNo" style="width:100%;" disabled="true" /></td>
 				</tr>
 			</table>
-			<s:submit value="社員検索" onclick="window.open('/bonbon/employeeInformation/employeeInformation', '社員検索', 'width=500,height=500');"/>
 		</div>
 	</s:form>
 </div>

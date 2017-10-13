@@ -16,31 +16,33 @@
     	<html:submit property="employeeRegistration" value="登録" />
     	<input type="button" value="閉じる" onClick="window.close()"  />
 		<div align="center">
+			<html:errors />
 			<h1>社員登録</h1>
+			${f:h(message)}
 			<table border="2">
-				<caption>${f:h(message)}</caption>
 				<tr>
-					<td>社員CD<td>
+					<td>社員CD</td>
 					<td><html:text maxlength="10" property="employeeCd" /></td>
 				</tr>
 				<tr>
-					<td>名前<td>
-					<td><html:text maxlength="10" property="employeeName" /></td>
+					<td>名前</td>
+					<td><html:text maxlength="32" property="employeeName" /></td>
 				</tr>
 				<tr>
-					<td>所属店舗<td>
-					<td><html:text maxlength="10" property="shozokuShop" /></td>
+					<td>所属店舗</td>
+					<td><html:text maxlength="8" property="shozokuShop" /></td>
 				</tr>
 				<tr>
-					<td>生年月日<td>
-					<td><html:text maxlength="10" property="birthDay" /></td>
+					<td>生年月日</td>
+					<td><html:text maxlength="8" property="birthDay" /></td>
 				</tr>
 				<tr>
-					<td>性別<td>
+					<td>性別</td>
 					<td>男性：<html:radio property="sex" value="1"/>女性：<html:radio property="sex" value="2"/></td>
 				</tr>
 			</table>
 		</div>
+		<html:hidden property="adminCd" />
 	</s:form>
 </div>
 </body>

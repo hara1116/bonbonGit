@@ -7,7 +7,6 @@ import org.seasar.struts.annotation.Execute;
 
 import sa.bonbon.form.LoginForm;
 import sa.bonbon.service.LoginService;
-import sa.bonbon.service.UserregistService;
 
 public class LoginAction {
 	/**アクションフォーム*/
@@ -39,15 +38,21 @@ public class LoginAction {
 	public String masterMenu() {
     	int count=0;
     	try {
+    		// 存在チェック
     		count =loginService.login(loginForm.adminCd,loginForm.password);
+    		// 従業員名の取得
+    		if (count != 0) {
+    			loginForm.adminName = loginService.getAdminName(loginForm.adminCd);
+    		}
+
+    		if(count == 0){
+        		message = "登録されていません";
+    			return "login.jsp";
+    		}
     	} catch (Exception e) {
-    		message = "検索に失敗しました。";
-    		return "login.jsp";
+    		return "/error/SystemError.jsp";
     	}
-		if(count == 0){
-    		message = "登録されておりませんよ";
-			return "login.jsp";
-		}
+
 		return "/masterMenu/index.jsp";
     }
 }

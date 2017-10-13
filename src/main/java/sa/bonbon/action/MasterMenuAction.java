@@ -25,15 +25,6 @@ public class MasterMenuAction {
 	@Resource
 	protected MasterMenuService masterMenuService;
 
-	/**
-	 * 初期表示
-	 * @return
-	 */
-    @Execute(validator = false)
-	public String masterMenu() {
-        return "index.jsp";
-	}
-
     /**
      * ログアウト
      * @return
@@ -41,23 +32,6 @@ public class MasterMenuAction {
     @Execute(validator = false)
 	public String logout() {
         return "/login/login.jsp";
-	}
-
-    /**
-     * 店舗登録画面を開く
-     * @return
-     */
-    @Execute(validator = false)
-	public String shopRegister() {
-        return "/shopRegister/index.jsp";
-	}
-    /**
-     * 社員登録画面を開く
-     * @return
-     */
-    @Execute(validator = false)
-	public String employeeRegist() {
-        return "/employeeRegist/index.jsp";
 	}
 
 }
